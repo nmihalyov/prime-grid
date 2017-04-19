@@ -1,0 +1,15 @@
+{
+  "name": "prime-grid",
+  "version": "1.0.0",
+  "authors": [
+    "Nikita Mihalyov <nikita.mihalyov@gmail.com>"
+  ],
+  "description": "A prime grid for your project",
+  "main": "",
+  "keywords": [
+    "prime",
+    "grid"
+  ],
+  "license": "ISC",
+  "homepage": ""
+}
