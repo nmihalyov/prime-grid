@@ -11,13 +11,24 @@ $sm: 767px
 $md: 991px
 $lg: 1199px
 
+// Container
+$container-max-width: 100%
+$container-width: 100%
+
+// Row
+$row-max-width: 100%
+$row-width: 100%
+
 
 /*== Extra large devices and lower (default) ==*/
 .container
-    max-width: 100%
+    max-width: $container-max-width
+    width: $container-width
     margin: 0 auto
 
 .row
+    max-width: $row-max-width
+    width: $row-width
     box-sizing: border-box
     display: flex
     flex: 0 1 auto
