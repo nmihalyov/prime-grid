@@ -3,6 +3,9 @@
 
 [**Documentation**](http://web-nm.tk/prime-grid/)
 
+Clone:
+**`git clone https://github.com/nmihalyov/prime-grid.git`**
+
 Install via Bower:
 **`bower i prime-grid`**
 
