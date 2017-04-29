@@ -27,13 +27,12 @@ $row-width: 100%
     margin: 0 auto
 
 .row
+    display: flex
+    flex: 0 1 auto
+    flex-flow: row wrap
     max-width: $row-max-width
     width: $row-width
     box-sizing: border-box
-    display: flex
-    flex: 0 1 auto
-    flex-direction: row
-    flex-wrap: wrap
     margin: 0 auto
     padding: 0 $col-gutter / 2
     &.no-gutter
@@ -77,8 +76,9 @@ $row-width: 100%
 .col-offset-10,
 .col-offset-11,
 .col-offset-12
-    box-sizing: border-box
     flex: 0 0 auto
+    max-width: 100%
+    box-sizing: border-box
     padding: 0 $col-gutter / 2
     &.no-gutter
         padding: 0
@@ -100,9 +100,7 @@ $row-width: 100%
 .col-offset-10,
 .col-offset-11,
 .col-offset-12
-    flex-grow: 1
-    flex-basis: 0
-    max-width: 100%
+    flex: 1 0 0
 
 @for $i from 1 through 12
     .col-#{$i}
@@ -172,7 +170,7 @@ $row-width: 100%
 
 /*== Large devices and lower ==*/
 @media only screen and (max-width: $lg)
-    .row,
+    .row
         &.vert-gutter-lg
             padding-top: $col-gutter / 2
             padding-bottom: $col-gutter / 2
@@ -214,8 +212,9 @@ $row-width: 100%
     .col-lg-offset-10,
     .col-lg-offset-11,
     .col-lg-offset-12
-        box-sizing: border-box
         flex: 0 0 auto
+        max-width: 100%
+        box-sizing: border-box
         padding: 0 $col-gutter / 2
         &.vert-gutter-lg
             padding-top: $col-gutter / 2
@@ -237,9 +236,7 @@ $row-width: 100%
     .col-lg-offset-10,
     .col-lg-offset-11,
     .col-lg-offset-12
-        flex-grow: 1
-        flex-basis: 0
-        max-width: 100%
+        flex: 1 0 0
 
     @for $i from 1 through 12
         .col-lg-#{$i}
@@ -351,8 +348,9 @@ $row-width: 100%
     .col-md-offset-10,
     .col-md-offset-11,
     .col-md-offset-12
-        box-sizing: border-box
         flex: 0 0 auto
+        max-width: 100%
+        box-sizing: border-box
         padding: 0 $col-gutter / 2
         &.vert-gutter-md
             padding-top: $col-gutter / 2
@@ -374,9 +372,7 @@ $row-width: 100%
     .col-md-offset-10,
     .col-md-offset-11,
     .col-md-offset-12
-        flex-grow: 1
-        flex-basis: 0
-        max-width: 100%
+        flex: 1 0 0
 
     @for $i from 1 through 12
         .col-md-#{$i}
@@ -488,8 +484,9 @@ $row-width: 100%
     .col-sm-offset-10,
     .col-sm-offset-11,
     .col-sm-offset-12
-        box-sizing: border-box
         flex: 0 0 auto
+        max-width: 100%
+        box-sizing: border-box
         padding: 0 $col-gutter / 2
         &.vert-gutter-sm
             padding-top: $col-gutter / 2
@@ -511,9 +508,7 @@ $row-width: 100%
     .col-sm-offset-10,
     .col-sm-offset-11,
     .col-sm-offset-12
-        flex-grow: 1
-        flex-basis: 0
-        max-width: 100%
+        flex: 1 0 0
 
     @for $i from 1 through 12
         .col-sm-#{$i}

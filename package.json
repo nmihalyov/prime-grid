@@ -1,23 +1,24 @@
 {
-  "name": "prime-grid",
-  "version": "1.2.2",
-  "description": "A prime grid for your projects!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nmihalyov/prime-grid.git"
-  },
-  "keywords": [
-    "prime",
-    "grid"
-  ],
-  "author": "Nikita Mihalyov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nmihalyov/prime-grid/issues"
-  },
-  "homepage": "https://github.com/nmihalyov/prime-grid#readme"
+	"name": "prime-grid",
+	"version": "1.3.0",
+	"description": "A prime grid for your projects!",
+	"author": {
+		"name": "Nikita Mihalyov",
+		"email": "nikita.mihalyov@gmail.com",
+		"url": "http://web-nm.tk/"
+	},
+	"main": "",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nmihalyov/prime-grid.git"
+	},
+	"keywords": [
+		"prime",
+		"grid"
+	],
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nmihalyov/prime-grid/issues"
+	},
+	"homepage": "https://github.com/nmihalyov/prime-grid#readme"
 }
