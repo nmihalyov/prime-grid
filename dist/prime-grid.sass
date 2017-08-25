@@ -22,33 +22,39 @@ $row-width: 100%
 
 /*== Extra large devices and lower (default) ==*/
 .container
-    max-width: $container-max-width
-    width: $container-width
-    margin: 0 auto
+	max-width: $container-max-width
+	width: $container-width
+	margin: 0 auto
 
 .row
-    display: flex
-    flex: 0 1 auto
-    flex-flow: row wrap
-    max-width: $row-max-width
-    width: $row-width
-    box-sizing: border-box
-    margin: 0 auto
-    padding: 0 $col-gutter / 2
-    &.no-gutter
-        padding: 0
-    &.vert-gutter
-        padding-top: $col-gutter / 2
-        padding-bottom: $col-gutter / 2
+	display: flex
+	flex: 0 1 auto
+	flex-flow: row wrap
+	max-width: $row-max-width
+	width: $row-width
+	box-sizing: border-box
+	margin: 0 auto
+	padding: 0 $col-gutter / 2
+	&.no-gutter
+		padding: 0
+	&.vert-gutter
+		padding-top: $col-gutter / 2
+		padding-bottom: $col-gutter / 2
 
 .row-reverse
-    flex-direction: row-reverse
+	flex-direction: row-reverse
 
 .col-reverse
-    flex-direction: col-reverse
+	flex-direction: col-reverse
 
 .row-break
-    width: 100%
+	width: 100%
+
+.row-break
+	&-sm,
+	&-md,
+	&-lg
+		display: none
 
 .col,
 .col-1,
@@ -76,15 +82,15 @@ $row-width: 100%
 .col-offset-10,
 .col-offset-11,
 .col-offset-12
-    flex: 0 0 auto
-    max-width: 100%
-    box-sizing: border-box
-    padding: 0 $col-gutter / 2
-    &.no-gutter
-        padding: 0
-    &.vert-gutter
-        padding-top: $col-gutter / 2
-        padding-bottom: $col-gutter / 2
+	flex: 0 0 auto
+	max-width: 100%
+	box-sizing: border-box
+	padding: 0 $col-gutter / 2
+	&.no-gutter
+		padding: 0
+	&.vert-gutter
+		padding-top: $col-gutter / 2
+		padding-bottom: $col-gutter / 2
 
 .col,
 .col-offset-0,
@@ -100,477 +106,489 @@ $row-width: 100%
 .col-offset-10,
 .col-offset-11,
 .col-offset-12
-    flex: 1 0 0
+	flex: 1 0 0
 
 @for $i from 1 through 12
-    .col-#{$i}
-        flex-basis: $col-width * $i
-        max-width: $col-width * $i
+	.col-#{$i}
+		flex-basis: $col-width * $i
+		max-width: $col-width * $i
 
 .col-offset-0
-    margin-left: 0
+	margin-left: 0
 
 @for $i from 1 through 11
-    .col-offset-#{$i}
-        margin-left: $col-width * $i
+	.col-offset-#{$i}
+		margin-left: $col-width * $i
 
 .row-left
-    justify-content: flex-start
+	justify-content: flex-start
 
 .row-center
-    justify-content: center
+	justify-content: center
 
 .row-right
-    justify-content: flex-end
+	justify-content: flex-end
 
 .row-between
-    justify-content: space-between
+	justify-content: space-between
 
 .row-around
-    justify-content: space-around
+	justify-content: space-around
 
 .row-top
-    align-items: flex-start
+	align-items: flex-start
 
 .row-middle
-    align-items: center
+	align-items: center
 
 .row-stretch
-    align-items: stretch
+	align-items: stretch
 
 .row-baseline
-    align-items: baseline
+	align-items: baseline
 
 .row-bottom
-    align-items: flex-end
+	align-items: flex-end
 
 .col-top
-    align-self: flex-start
+	align-self: flex-start
 
 .col-middle
-    align-self: center
+	align-self: center
 
 .col-bottom
-    align-self: flex-end
+	align-self: flex-end
 
 .first
-    order: -1
+	order: -1
 
 .last
-    order: 1
+	order: 1
 
 .hide   
-    display: none
+	display: none
 
 .show
-    display: block
-    &.row
-        display: flex
+	display: block
+	&.row
+		display: flex
 
 
 /*== Large devices and lower ==*/
 @media only screen and (max-width: $lg)
-    .row
-        &.vert-gutter-lg
-            padding-top: $col-gutter / 2
-            padding-bottom: $col-gutter / 2
-        &.no-gutter-lg
-            padding: 0
+	.row
+		&.vert-gutter-lg
+			padding-top: $col-gutter / 2
+			padding-bottom: $col-gutter / 2
+		&.no-gutter-lg
+			padding: 0
 
-    .row-reverse-lg
-        flex-direction: row-reverse
+	.row-reverse-lg
+		flex-direction: row-reverse
 
-    .col-reverse-lg
-        flex-direction: col-reverse
+	.col-reverse-lg
+		flex-direction: col-reverse
 
-    .row-break-lg
-        width: 100%
+	.row-break-lg
+		display: block
+		width: 100%
 
-    .col-lg,
-    .col-lg-1,
-    .col-lg-2,
-    .col-lg-3,
-    .col-lg-4,
-    .col-lg-5,
-    .col-lg-6,
-    .col-lg-7,
-    .col-lg-8,
-    .col-lg-9,
-    .col-lg-10,
-    .col-lg-11,
-    .col-lg-12,
-    .col-lg-offset-0,
-    .col-lg-offset-1,
-    .col-lg-offset-2,
-    .col-lg-offset-3,
-    .col-lg-offset-4,
-    .col-lg-offset-5,
-    .col-lg-offset-6,
-    .col-lg-offset-7,
-    .col-lg-offset-8,
-    .col-lg-offset-9,
-    .col-lg-offset-10,
-    .col-lg-offset-11,
-    .col-lg-offset-12
-        flex: 0 0 auto
-        max-width: 100%
-        box-sizing: border-box
-        padding: 0 $col-gutter / 2
-        &.vert-gutter-lg
-            padding-top: $col-gutter / 2
-            padding-bottom: $col-gutter / 2
-        &.no-gutter-lg
-            padding: 0
+	.row-break
+		&-sm,
+		&-md
+			display: none
 
-    .col-lg,
-    .col-lg-offset-0,
-    .col-lg-offset-1,
-    .col-lg-offset-2,
-    .col-lg-offset-3,
-    .col-lg-offset-4,
-    .col-lg-offset-5,
-    .col-lg-offset-6,
-    .col-lg-offset-7,
-    .col-lg-offset-8,
-    .col-lg-offset-9,
-    .col-lg-offset-10,
-    .col-lg-offset-11,
-    .col-lg-offset-12
-        flex: 1 0 0
+	.col-lg,
+	.col-lg-1,
+	.col-lg-2,
+	.col-lg-3,
+	.col-lg-4,
+	.col-lg-5,
+	.col-lg-6,
+	.col-lg-7,
+	.col-lg-8,
+	.col-lg-9,
+	.col-lg-10,
+	.col-lg-11,
+	.col-lg-12,
+	.col-lg-offset-0,
+	.col-lg-offset-1,
+	.col-lg-offset-2,
+	.col-lg-offset-3,
+	.col-lg-offset-4,
+	.col-lg-offset-5,
+	.col-lg-offset-6,
+	.col-lg-offset-7,
+	.col-lg-offset-8,
+	.col-lg-offset-9,
+	.col-lg-offset-10,
+	.col-lg-offset-11,
+	.col-lg-offset-12
+		flex: 0 0 auto
+		max-width: 100%
+		box-sizing: border-box
+		padding: 0 $col-gutter / 2
+		&.vert-gutter-lg
+			padding-top: $col-gutter / 2
+			padding-bottom: $col-gutter / 2
+		&.no-gutter-lg
+			padding: 0
 
-    @for $i from 1 through 12
-        .col-lg-#{$i}
-            flex-basis: $col-width * $i
-            max-width: $col-width * $i
+	.col-lg,
+	.col-lg-offset-0,
+	.col-lg-offset-1,
+	.col-lg-offset-2,
+	.col-lg-offset-3,
+	.col-lg-offset-4,
+	.col-lg-offset-5,
+	.col-lg-offset-6,
+	.col-lg-offset-7,
+	.col-lg-offset-8,
+	.col-lg-offset-9,
+	.col-lg-offset-10,
+	.col-lg-offset-11,
+	.col-lg-offset-12
+		flex: 1 0 0
 
-    .col-lg-offset-0
-        margin-left: 0
+	@for $i from 1 through 12
+		.col-lg-#{$i}
+			flex-basis: $col-width * $i
+			max-width: $col-width * $i
 
-    @for $i from 1 through 11
-        .col-lg-offset-#{$i}
-            margin-left: $col-width * $i
+	.col-lg-offset-0
+		margin-left: 0
 
-    .row-left-lg
-        justify-content: flex-start
+	@for $i from 1 through 11
+		.col-lg-offset-#{$i}
+			margin-left: $col-width * $i
 
-    .row-center-lg
-        justify-content: center
+	.row-left-lg
+		justify-content: flex-start
 
-    .row-right-lg
-        justify-content: flex-end
+	.row-center-lg
+		justify-content: center
 
-    .row-between-lg
-        justify-content: space-between
+	.row-right-lg
+		justify-content: flex-end
 
-    .row-around-lg
-        justify-content: space-around
+	.row-between-lg
+		justify-content: space-between
 
-    .row-top-lg
-        align-items: flex-start
+	.row-around-lg
+		justify-content: space-around
 
-    .row-middle-lg
-        align-items: center
+	.row-top-lg
+		align-items: flex-start
 
-    .row-stretch-lg
-        align-items: stretch
+	.row-middle-lg
+		align-items: center
 
-    .row-baseline-lg
-        align-items: baseline
+	.row-stretch-lg
+		align-items: stretch
 
-    .row-bottom-lg
-        align-items: flex-end
+	.row-baseline-lg
+		align-items: baseline
 
-    .col-top-lg
-        align-self: flex-start
+	.row-bottom-lg
+		align-items: flex-end
 
-    .col-middle-lg
-        align-self: center
+	.col-top-lg
+		align-self: flex-start
 
-    .col-bottom-lg
-        align-self: flex-end
+	.col-middle-lg
+		align-self: center
 
-    .first-lg
-        order: -1
+	.col-bottom-lg
+		align-self: flex-end
 
-    .last-lg
-        order: 1
-    
-    .hide-lg
-        display: none
+	.first-lg
+		order: -1
 
-    .show-lg
-        display: block
-        &.row
-            display: flex
+	.last-lg
+		order: 1
+	
+	.hide-lg
+		display: none
+
+	.show-lg
+		display: block
+		&.row
+			display: flex
 
 
 /*== Medium devices and lower ==*/
 @media only screen and (max-width: $md)
-    .row
-        &.vert-gutter-md
-            padding-top: $col-gutter / 2
-            padding-bottom: $col-gutter / 2
-        &.no-gutter-md
-            padding: 0
+	.row
+		&.vert-gutter-md
+			padding-top: $col-gutter / 2
+			padding-bottom: $col-gutter / 2
+		&.no-gutter-md
+			padding: 0
 
-    .row-reverse-md
-        flex-direction: row-reverse
+	.row-reverse-md
+		flex-direction: row-reverse
 
-    .col-reverse-md
-        flex-direction: col-reverse
+	.col-reverse-md
+		flex-direction: col-reverse
 
-    .row-break-md
-        width: 100%
+	.row-break-md
+		display: block
+		width: 100%
 
-    .col-md,
-    .col-md-1,
-    .col-md-2,
-    .col-md-3,
-    .col-md-4,
-    .col-md-5,
-    .col-md-6,
-    .col-md-7,
-    .col-md-8,
-    .col-md-9,
-    .col-md-10,
-    .col-md-11,
-    .col-md-12,
-    .col-md-offset-0,
-    .col-md-offset-1,
-    .col-md-offset-2,
-    .col-md-offset-3,
-    .col-md-offset-4,
-    .col-md-offset-5,
-    .col-md-offset-6,
-    .col-md-offset-7,
-    .col-md-offset-8,
-    .col-md-offset-9,
-    .col-md-offset-10,
-    .col-md-offset-11,
-    .col-md-offset-12
-        flex: 0 0 auto
-        max-width: 100%
-        box-sizing: border-box
-        padding: 0 $col-gutter / 2
-        &.vert-gutter-md
-            padding-top: $col-gutter / 2
-            padding-bottom: $col-gutter / 2
-        &.no-gutter-md
-            padding: 0
+	.row-break
+		&-sm
+			display: none
 
-    .col-md,
-    .col-md-offset-0,
-    .col-md-offset-1,
-    .col-md-offset-2,
-    .col-md-offset-3,
-    .col-md-offset-4,
-    .col-md-offset-5,
-    .col-md-offset-6,
-    .col-md-offset-7,
-    .col-md-offset-8,
-    .col-md-offset-9,
-    .col-md-offset-10,
-    .col-md-offset-11,
-    .col-md-offset-12
-        flex: 1 0 0
+	.col-md,
+	.col-md-1,
+	.col-md-2,
+	.col-md-3,
+	.col-md-4,
+	.col-md-5,
+	.col-md-6,
+	.col-md-7,
+	.col-md-8,
+	.col-md-9,
+	.col-md-10,
+	.col-md-11,
+	.col-md-12,
+	.col-md-offset-0,
+	.col-md-offset-1,
+	.col-md-offset-2,
+	.col-md-offset-3,
+	.col-md-offset-4,
+	.col-md-offset-5,
+	.col-md-offset-6,
+	.col-md-offset-7,
+	.col-md-offset-8,
+	.col-md-offset-9,
+	.col-md-offset-10,
+	.col-md-offset-11,
+	.col-md-offset-12
+		flex: 0 0 auto
+		max-width: 100%
+		box-sizing: border-box
+		padding: 0 $col-gutter / 2
+		&.vert-gutter-md
+			padding-top: $col-gutter / 2
+			padding-bottom: $col-gutter / 2
+		&.no-gutter-md
+			padding: 0
 
-    @for $i from 1 through 12
-        .col-md-#{$i}
-            flex-basis: $col-width * $i
-            max-width: $col-width * $i
+	.col-md,
+	.col-md-offset-0,
+	.col-md-offset-1,
+	.col-md-offset-2,
+	.col-md-offset-3,
+	.col-md-offset-4,
+	.col-md-offset-5,
+	.col-md-offset-6,
+	.col-md-offset-7,
+	.col-md-offset-8,
+	.col-md-offset-9,
+	.col-md-offset-10,
+	.col-md-offset-11,
+	.col-md-offset-12
+		flex: 1 0 0
 
-    .col-md-offset-0
-        margin-left: 0
+	@for $i from 1 through 12
+		.col-md-#{$i}
+			flex-basis: $col-width * $i
+			max-width: $col-width * $i
 
-    @for $i from 1 through 11
-        .col-md-offset-#{$i}
-            margin-left: $col-width * $i
+	.col-md-offset-0
+		margin-left: 0
 
-    .row-left-md
-        justify-content: flex-start
+	@for $i from 1 through 11
+		.col-md-offset-#{$i}
+			margin-left: $col-width * $i
 
-    .row-center-md
-        justify-content: center
+	.row-left-md
+		justify-content: flex-start
 
-    .row-right-md
-        justify-content: flex-end
+	.row-center-md
+		justify-content: center
 
-    .row-between-md
-        justify-content: space-between
+	.row-right-md
+		justify-content: flex-end
 
-    .row-around-md
-        justify-content: space-around
+	.row-between-md
+		justify-content: space-between
 
-    .row-top-md
-        align-items: flex-start
+	.row-around-md
+		justify-content: space-around
 
-    .row-middle-md
-        align-items: center
+	.row-top-md
+		align-items: flex-start
 
-    .row-stretch-md
-        align-items: stretch
+	.row-middle-md
+		align-items: center
 
-    .row-baseline-md
-        align-items: baseline
+	.row-stretch-md
+		align-items: stretch
 
-    .row-bottom-md
-        align-items: flex-end
+	.row-baseline-md
+		align-items: baseline
 
-    .col-top-md
-        align-self: flex-start
+	.row-bottom-md
+		align-items: flex-end
 
-    .col-middle-md
-        align-self: center
+	.col-top-md
+		align-self: flex-start
 
-    .col-bottom-md
-        align-self: flex-end
+	.col-middle-md
+		align-self: center
 
-    .first-md
-        order: -1
+	.col-bottom-md
+		align-self: flex-end
 
-    .last-md
-        order: 1
-    
-    .hide-md
-        display: none
+	.first-md
+		order: -1
 
-    .show-md
-        display: block
-        &.row
-            display: flex
+	.last-md
+		order: 1
+	
+	.hide-md
+		display: none
+
+	.show-md
+		display: block
+		&.row
+			display: flex
 
 
 /*== Small devices ==*/
 @media only screen and (max-width: $sm)
-    .row
-        &.vert-gutter-sm
-            padding-top: $col-gutter / 2
-            padding-bottom: $col-gutter / 2
-        &.no-gutter-sm
-            padding: 0
+	.row
+		&.vert-gutter-sm
+			padding-top: $col-gutter / 2
+			padding-bottom: $col-gutter / 2
+		&.no-gutter-sm
+			padding: 0
 
-    .row-reverse-sm
-        flex-direction: row-reverse
+	.row-reverse-sm
+		flex-direction: row-reverse
 
-    .col-reverse-sm
-        flex-direction: col-reverse
+	.col-reverse-sm
+		flex-direction: col-reverse
 
-    .row-break-sm
-        width: 100%
+	.row-break-sm
+		display: block
+		width: 100%
 
-    .col-sm,
-    .col-sm-1,
-    .col-sm-2,
-    .col-sm-3,
-    .col-sm-4,
-    .col-sm-5,
-    .col-sm-6,
-    .col-sm-7,
-    .col-sm-8,
-    .col-sm-9,
-    .col-sm-10,
-    .col-sm-11,
-    .col-sm-12,
-    .col-sm-offset-0,
-    .col-sm-offset-1,
-    .col-sm-offset-2,
-    .col-sm-offset-3,
-    .col-sm-offset-4,
-    .col-sm-offset-5,
-    .col-sm-offset-6,
-    .col-sm-offset-7,
-    .col-sm-offset-8,
-    .col-sm-offset-9,
-    .col-sm-offset-10,
-    .col-sm-offset-11,
-    .col-sm-offset-12
-        flex: 0 0 auto
-        max-width: 100%
-        box-sizing: border-box
-        padding: 0 $col-gutter / 2
-        &.vert-gutter-sm
-            padding-top: $col-gutter / 2
-            padding-bottom: $col-gutter / 2
-        &.no-gutter-sm
-            padding: 0
+	.col-sm,
+	.col-sm-1,
+	.col-sm-2,
+	.col-sm-3,
+	.col-sm-4,
+	.col-sm-5,
+	.col-sm-6,
+	.col-sm-7,
+	.col-sm-8,
+	.col-sm-9,
+	.col-sm-10,
+	.col-sm-11,
+	.col-sm-12,
+	.col-sm-offset-0,
+	.col-sm-offset-1,
+	.col-sm-offset-2,
+	.col-sm-offset-3,
+	.col-sm-offset-4,
+	.col-sm-offset-5,
+	.col-sm-offset-6,
+	.col-sm-offset-7,
+	.col-sm-offset-8,
+	.col-sm-offset-9,
+	.col-sm-offset-10,
+	.col-sm-offset-11,
+	.col-sm-offset-12
+		flex: 0 0 auto
+		max-width: 100%
+		box-sizing: border-box
+		padding: 0 $col-gutter / 2
+		&.vert-gutter-sm
+			padding-top: $col-gutter / 2
+			padding-bottom: $col-gutter / 2
+		&.no-gutter-sm
+			padding: 0
 
-    .col-sm,
-    .col-sm-offset-0,
-    .col-sm-offset-1,
-    .col-sm-offset-2,
-    .col-sm-offset-3,
-    .col-sm-offset-4,
-    .col-sm-offset-5,
-    .col-sm-offset-6,
-    .col-sm-offset-7,
-    .col-sm-offset-8,
-    .col-sm-offset-9,
-    .col-sm-offset-10,
-    .col-sm-offset-11,
-    .col-sm-offset-12
-        flex: 1 0 0
+	.col-sm,
+	.col-sm-offset-0,
+	.col-sm-offset-1,
+	.col-sm-offset-2,
+	.col-sm-offset-3,
+	.col-sm-offset-4,
+	.col-sm-offset-5,
+	.col-sm-offset-6,
+	.col-sm-offset-7,
+	.col-sm-offset-8,
+	.col-sm-offset-9,
+	.col-sm-offset-10,
+	.col-sm-offset-11,
+	.col-sm-offset-12
+		flex: 1 0 0
 
-    @for $i from 1 through 12
-        .col-sm-#{$i}
-            flex-basis: $col-width * $i
-            max-width: $col-width * $i
+	@for $i from 1 through 12
+		.col-sm-#{$i}
+			flex-basis: $col-width * $i
+			max-width: $col-width * $i
 
-    .col-sm-offset-0
-        margin-left: 0
+	.col-sm-offset-0
+		margin-left: 0
 
-    @for $i from 1 through 11
-        .col-sm-offset-#{$i}
-            margin-left: $col-width * $i
+	@for $i from 1 through 11
+		.col-sm-offset-#{$i}
+			margin-left: $col-width * $i
 
-    .row-left-sm
-        justify-content: flex-start
+	.row-left-sm
+		justify-content: flex-start
 
-    .row-center-sm
-        justify-content: center
+	.row-center-sm
+		justify-content: center
 
-    .row-right-sm
-        justify-content: flex-end
+	.row-right-sm
+		justify-content: flex-end
 
-    .row-between-sm
-        justify-content: space-between
+	.row-between-sm
+		justify-content: space-between
 
-    .row-around-sm
-        justify-content: space-around
+	.row-around-sm
+		justify-content: space-around
 
-    .row-top-sm
-        align-items: flex-start
+	.row-top-sm
+		align-items: flex-start
 
-    .row-middle-sm
-        align-items: center
+	.row-middle-sm
+		align-items: center
 
-    .row-stretch-sm
-        align-items: stretch
+	.row-stretch-sm
+		align-items: stretch
 
-    .row-baseline-sm
-        align-items: baseline
+	.row-baseline-sm
+		align-items: baseline
 
-    .row-bottom-sm
-        align-items: flex-end
+	.row-bottom-sm
+		align-items: flex-end
 
-    .col-top-sm
-        align-self: flex-start
+	.col-top-sm
+		align-self: flex-start
 
-    .col-middle-sm
-        align-self: center
+	.col-middle-sm
+		align-self: center
 
-    .col-bottom-sm
-        align-self: flex-end
+	.col-bottom-sm
+		align-self: flex-end
 
-    .first-sm
-        order: -1
+	.first-sm
+		order: -1
 
-    .last-sm
-        order: 1
-    
-    .hide-sm
-        display: none
+	.last-sm
+		order: 1
+	
+	.hide-sm
+		display: none
 
-    .show-sm
-        display: block
-        &.row
-            display: flex
+	.show-sm
+		display: block
+		&.row
+			display: flex
