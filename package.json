@@ -1,11 +1,11 @@
 {
 	"name": "prime-grid",
-	"version": "1.5.0",
+	"version": "1.6.2",
 	"description": "A prime grid for your projects!",
 	"author": {
 		"name": "Nikita Mihalyov",
 		"email": "nikita.mihalyov@gmail.com",
-		"url": "http://web-nm.tk/"
+		"url": "http://nmihalyov.tk/"
 	},
 	"main": "",
 	"repository": {
@@ -13,12 +13,16 @@
 		"url": "git+https://github.com/nmihalyov/prime-grid.git"
 	},
 	"keywords": [
-		"prime",
-		"grid"
+    "grid",
+    "grid-framework",
+    "css",
+    "sass",
+    "scss",
+		"prime"
 	],
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/nmihalyov/prime-grid/issues"
 	},
-	"homepage": "https://github.com/nmihalyov/prime-grid#readme"
+	"homepage": "http://nmihalyov.tk/prime-grid"
 }
