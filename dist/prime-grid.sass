@@ -1,5 +1,13 @@
 /*== Prime Grid ==*/
 
+// Reset elements
+*,
+*:after,
+*:before
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
 // Width of one column
 $col-width: 100% / 12
 
@@ -17,7 +25,10 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
 .container
   max-width: map-get($container-max-widths, "default")
   width: 100%
-  margin: 0 auto
+  margin-left: auto
+  margin-right: auto
+  &-fluid
+    max-width: 100%
 
 .row
   display: flex
@@ -29,9 +40,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
   padding: 0 $gutter / 2
   &.no-gutter
     padding: 0
+  &.gutter
+    padding: $gutter / 2
   &.vert-gutter
     padding-top: $gutter / 2
     padding-bottom: $gutter / 2
+  &.hor-gutter
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
 
 .row-reverse
   flex-direction: row-reverse
@@ -82,9 +98,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
   padding: 0 $gutter / 2
   &.no-gutter
     padding: 0
+  &.gutter
+    padding: $gutter / 2
   &.vert-gutter
     padding-top: $gutter / 2
     padding-bottom: $gutter / 2
+  &.hor-gutter
+    padding-left: $gutter / 2
+    padding-right: $gutter / 2
 
 .col,
 .col-offset-0,
@@ -175,13 +196,22 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
 @media only screen and (max-width: map-get($breakpoints, "xl") - 1)
   .container
     max-width: map-get($container-max-widths, "xl")
+    &-xl
+      max-width: map-get($container-max-widths, "xl")
+    &-fluid-xl
+      max-width: 100%
 
   .row
+    &.no-gutter-xl
+      padding: 0
+    &.gutter-xl
+      padding: $gutter / 2
     &.vert-gutter-xl
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-xl
-      padding: 0
+    &.hor-gutter-xl
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .row-reverse-xl
     flex-direction: row-reverse
@@ -230,11 +260,16 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     max-width: 100%
     box-sizing: border-box
     padding: 0 $gutter / 2
+    &.no-gutter-xl
+      padding: 0
+    &.gutter-xl
+      padding: $gutter / 2
     &.vert-gutter-xl
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-xl
-      padding: 0
+    &.hor-gutter-xl
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .col-xl,
   .col-xl-offset-0,
@@ -325,13 +360,22 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
 @media only screen and (max-width: map-get($breakpoints, "lg") - 1)
   .container
     max-width: map-get($container-max-widths, "lg")
+    &-lg
+      max-width: map-get($container-max-widths, "lg")
+    &-fluid-lg
+      max-width: 100%
 
   .row
+    &.no-gutter-lg
+      padding: 0
+    &.gutter-lg
+      padding: $gutter / 2
     &.vert-gutter-lg
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-lg
-      padding: 0
+    &.hor-gutter-lg
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .row-reverse-lg
     flex-direction: row-reverse
@@ -379,11 +423,16 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     max-width: 100%
     box-sizing: border-box
     padding: 0 $gutter / 2
+    &.no-gutter-lg
+      padding: 0
+    &.gutter-lg
+      padding: $gutter / 2
     &.vert-gutter-lg
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-lg
-      padding: 0
+    &.hor-gutter-lg
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .col-lg,
   .col-lg-offset-0,
@@ -474,13 +523,22 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
 @media only screen and (max-width: map-get($breakpoints, "md") - 1)
   .container
     max-width: map-get($container-max-widths, "md")
+    &-md
+      max-width: map-get($container-max-widths, "md")
+    &-fluid-md
+      max-width: 100%
 
   .row
+    &.no-gutter-md
+      padding: 0
+    &.gutter-md
+      padding: $gutter / 2
     &.vert-gutter-md
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-md
-      padding: 0
+    &.hor-gutter-md
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .row-reverse-md
     flex-direction: row-reverse
@@ -527,11 +585,16 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     max-width: 100%
     box-sizing: border-box
     padding: 0 $gutter / 2
+    &.no-gutter-md
+      padding: 0
+    &.gutter-md
+      padding: $gutter / 2
     &.vert-gutter-md
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-md
-      padding: 0
+    &.hor-gutter-md
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .col-md,
   .col-md-offset-0,
@@ -622,13 +685,22 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
 @media only screen and (max-width: map-get($breakpoints, "sm") - 1)
   .container
     max-width: map-get($container-max-widths, "sm")
+    &-sm
+      max-width: map-get($container-max-widths, "sm")
+    &-fluid-sm
+      max-width: 100%
 
   .row
+    &.no-gutter-sm
+      padding: 0
+    &.gutter-sm
+      padding: $gutter / 2
     &.vert-gutter-sm
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-sm
-      padding: 0
+    &.hor-gutter-sm
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .row-reverse-sm
     flex-direction: row-reverse
@@ -673,11 +745,16 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     max-width: 100%
     box-sizing: border-box
     padding: 0 $gutter / 2
+    &.no-gutter-sm
+      padding: 0
+    &.gutter-sm
+      padding: $gutter / 2
     &.vert-gutter-sm
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-sm
-      padding: 0
+    &.hor-gutter-sm
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .col-sm,
   .col-sm-offset-0,
@@ -768,13 +845,22 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
 @media only screen and (max-width: map-get($breakpoints, "xs") - 1)
   .container
     max-width: map-get($container-max-widths, "xs")
+    &-xs
+      max-width: map-get($container-max-widths, "xs")
+    &-fluid-xs
+      max-width: 100%
 
   .row
+    &.no-gutter-xs
+      padding: 0
+    &.gutter-xs
+      padding: $gutter / 2
     &.vert-gutter-xs
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-xs
-      padding: 0
+    &.hor-gutter-xs
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .row-reverse-xs
     flex-direction: row-reverse
@@ -816,11 +902,16 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     max-width: 100%
     box-sizing: border-box
     padding: 0 $gutter / 2
+    &.no-gutter-xs
+      padding: 0
+    &.gutter-xs
+      padding: $gutter / 2
     &.vert-gutter-xs
       padding-top: $gutter / 2
       padding-bottom: $gutter / 2
-    &.no-gutter-xs
-      padding: 0
+    &.hor-gutter-xs
+      padding-left: $gutter / 2
+      padding-right: $gutter / 2
 
   .col-xs,
   .col-xs-offset-0,

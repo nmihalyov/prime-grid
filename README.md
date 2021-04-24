@@ -3,6 +3,7 @@
 ![Prime Grid logo](prime-grid.png)
 
 ## A prime grid for your projects!
+### Customizable, lightweight and flexible grid library.
 
 [**Documentation**](http://nmihalyov.tk/prime-grid/)
 
