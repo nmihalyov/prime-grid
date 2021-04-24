@@ -47,6 +47,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
   &.gutter {
     padding: $gutter / 2
   }
+  &.no-vert-gutter {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &.no-hor-gutter {
+    padding-left: 0;
+    padding-right: 0;
+  }
   &.vert-gutter {
     padding-top: $gutter / 2;
     padding-bottom: $gutter / 2;
@@ -114,6 +122,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
   }
   &.gutter {
     padding: $gutter / 2
+  }
+  &.no-vert-gutter {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  &.no-hor-gutter {
+    padding-left: 0;
+    padding-right: 0;
   }
   &.vert-gutter {
     padding-top: $gutter / 2;
@@ -254,6 +270,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     &.gutter-xl {
       padding: $gutter / 2
     }
+    &.no-vert-gutter-xl {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-xl {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &.vert-gutter-xl {
       padding-top: $gutter / 2;
       padding-bottom: $gutter / 2;
@@ -321,6 +345,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     }
     &.gutter-xl {
       padding: $gutter / 2
+    }
+    &.no-vert-gutter-xl {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-xl {
+      padding-left: 0;
+      padding-right: 0;
     }
     &.vert-gutter-xl {
       padding-top: $gutter / 2;
@@ -462,6 +494,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     &.gutter-lg {
       padding: $gutter / 2
     }
+    &.no-vert-gutter-lg {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-lg {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &.vert-gutter-lg {
       padding-top: $gutter / 2;
       padding-bottom: $gutter / 2;
@@ -528,6 +568,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     }
     &.gutter-lg {
       padding: $gutter / 2
+    }
+    &.no-vert-gutter-lg {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-lg {
+      padding-left: 0;
+      padding-right: 0;
     }
     &.vert-gutter-lg {
       padding-top: $gutter / 2;
@@ -669,6 +717,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     &.gutter-md {
       padding: $gutter / 2
     }
+    &.no-vert-gutter-md {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-md {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &.vert-gutter-md {
       padding-top: $gutter / 2;
       padding-bottom: $gutter / 2;
@@ -734,6 +790,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     }
     &.gutter-md {
       padding: $gutter / 2
+    }
+    &.no-vert-gutter-md {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-md {
+      padding-left: 0;
+      padding-right: 0;
     }
     &.vert-gutter-md {
       padding-top: $gutter / 2;
@@ -874,6 +938,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     &.gutter-sm {
       padding: $gutter / 2
     }
+    &.no-vert-gutter-sm {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-sm {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &.vert-gutter-sm {
       padding-top: $gutter / 2;
       padding-bottom: $gutter / 2;
@@ -938,6 +1010,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     }
     &.gutter-sm {
       padding: $gutter / 2
+    }
+    &.no-vert-gutter-sm {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-sm {
+      padding-left: 0;
+      padding-right: 0;
     }
     &.vert-gutter-sm {
       padding-top: $gutter / 2;
@@ -1079,6 +1159,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     &.gutter-xs {
       padding: $gutter / 2
     }
+    &.no-vert-gutter-xs {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-xs {
+      padding-left: 0;
+      padding-right: 0;
+    }
     &.vert-gutter-xs {
       padding-top: $gutter / 2;
       padding-bottom: $gutter / 2;
@@ -1137,6 +1225,14 @@ $container-max-widths: ("default": 1320px, "xl": 1320px, "lg": 1140px, "md": 960
     }
     &.gutter-xs {
       padding: $gutter / 2
+    }
+    &.no-vert-gutter-xs {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &.no-hor-gutter-xs {
+      padding-left: 0;
+      padding-right: 0;
     }
     &.vert-gutter-s {
       padding-top: $gutter / 2;
