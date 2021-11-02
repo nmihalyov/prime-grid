@@ -23,6 +23,6 @@ Telegram: [@nmihalyov](http://t.me/nmihalyov)
 
 ВКонтакте: [vk.com](https://vk.com/nmihalyov)
 
-Мой сайт: [nmihalyov.tk](http://nmihalyov.tk)
+Мой сайт: [nmihalyov.tk](https://nmihalyov.tk)
 
 [Написать issue](https://github.com/nmihalyov/prime-grid/issues/new)
